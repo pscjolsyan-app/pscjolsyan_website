@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PSC Jolsyan - കേരളത്തിലെ ആദ്യത്തെ AI PSC മെന്റർ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Added Noto Serif Malayalam for stylish look and Plus Jakarta Sans for English -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Serif Malayalam', 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f8fc; /* App Matching Light-Blue Clean Background */
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        /* Color gradients synced from your App Welcome & Downloads screen */
+        .gradient-text {
+            background: linear-gradient(135deg, #1d4ed8, #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1d4ed8, #0284c7); /* App Sign In Blue */
+        }
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.05);
+        }
+        .premium-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* CSS Animation for AI Human Scanner Robot */
+        @keyframes scan {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.02); }
+        }
+        @keyframes laser {
+            0%, 100% { top: 15%; opacity: 0.3; }
+            50% { top: 85%; opacity: 1; }
+        }
+        @keyframes float-paper {
+            0% { transform: translateY(20px); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-40px); opacity: 0; }
+        }
+        .ai-bot { animation: scan 4s ease-in-out infinite; }
+        .laser-line { animation: laser 2.5s linear infinite; }
+        .printed-paper { animation: float-paper 3s linear infinite; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="w-full py-4 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-blue-100 gap-4 sticky top-0 bg-[#f4f8fc]/90 backdrop-blur-md z-50">
+        <div class="flex items-center cursor-pointer" onclick="showTab('home')">
+            <!-- FIXED: Assets folder route added for navbar logo -->
+            <img src="Assets/Logo.jpg" alt="AI PSC Jolsyan Logo" class="h-12 w-12 rounded-xl object-cover shadow-md mr-3 border border-blue-200">
+            <span class="text-xl font-black tracking-wider gradient-text font-[Plus Jakarta Sans] hidden sm:inline">AI PSC Jolsyan</span>
+        </div>
+        
+        <nav class="flex flex-wrap justify-center gap-1 text-sm font-semibold text-gray-600">
+            <button onclick="showTab('home')" class="nav-btn px-4 py-2 rounded-lg text-blue-700 hover:text-blue-500 transition">Home</button>
+            <button onclick="showTab('about')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">About Us</button>
+            <button onclick="showTab('offers')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Offers</button>
+            <button onclick="showTab('privacy')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Privacy Policy</button>
+            <button onclick="showTab('terms')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Terms & Conditions</button>
+            <button onclick="showTab('delete-account')" class="nav-btn px-4 py-2 rounded-lg hover:text-red-500 transition text-red-500">Delete Account</button>
+        </nav>
+
+        <a href="#download" onclick="showTab('home')" class="gradient-bg text-white font-bold px-5 py-2 rounded-full text-sm hover:opacity-90 transition shadow-lg shadow-blue-500/20">
+            Download App
+        </a>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+
+        <!-- TAB 1: HOME PAGE -->
+        <div id="home" class="tab-content active">
+            
+            <!-- Animated AI Computer Human Concept (Top Feature) -->
+            <section class="max-w-4xl mx-auto mb-16 mt-4 premium-card rounded-3xl p-8 overflow-hidden relative border border-blue-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                    <!-- FIXED YOUTUBE PLAYER: Standard Embed Pattern with controls enabled to prevent local restrictions -->
+                    <div class="relative w-full aspect-video md:h-64 rounded-2xl border border-gray-200 bg-black overflow-hidden shadow-xl">
+                        <iframe 
+                            class="w-full h-full" 
+                            src="https://www.youtube.com/embed/ohmHHsBdY10?rel=0&modestbranding=1" 
+                            title="AI PSC Jolsyan Video Animation" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-black mb-3 text-blue-900 font-[Plus Jakarta Sans]">Advanced AI Syllabus Scanning</h3>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
+                            ഞങ്ങളുടെ അത്യാധുനിക AI ഹ്യൂമൻ സിസ്റ്റം കേരള PSC സിലബസുകളും മുൻകാല ചോദ്യപേപ്പറുകളും ഒരു മാഗ്നിഫയിംഗ് ലെൻസിലൂടെ എന്നോണം സൂക്ഷ്മമായി സ്കാൻ ചെയ്ത് വിശകലനം ചെയ്യുന്നു. നിമിഷങ്ങൾക്കകം വരാൻ സാധ്യതയുള്ള ചോദ്യപേപ്പറുകൾ പ്രിന്റ് ചെയ്ത് നൽകാൻ കെൽപ്പുള്ളതാണ് ഈ ടെക്നോളജി!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Section -->
+            <section class="text-center relative pb-16">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 blur-3xl -z-10 rounded-full max-w-2xl mx-auto h-72 top-0"></div>
+                
+                <!-- FIXED: Assets folder route added for big artwork logo -->
+                <div class="flex justify-center mb-6">
+                    <img src="Assets/Logo.jpg" alt="AI PSC Jolsyan Artwork" class="w-48 h-48 md:w-60 md:h-60 object-contain rounded-full border-4 border-white shadow-[0_15px_40px_rgba(29,78,216,0.15)] bg-white">
+                </div>
+
+                <span class="inline-block bg-amber-100 text-amber-800 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-amber-200 tracking-wide">
+                    🚀 കേരളത്തിൽ ആദ്യമായി!
+                </span>
+                
+                <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6 text-slate-900">
+                    വെറുമൊരു ഊണിന്റെ പൈസയ്ക്ക് ഒരു <br>
+                    <span class="gradient-text">AI PSC ജോത്സ്യൻ!</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-medium">
+                    അടുത്ത നിങ്ങളുടെ കേരള PSC പരീക്ഷയ്ക്ക് വരാൻ പോകുന്ന, <span class="text-blue-700 font-bold">AI പ്രെഡിക്റ്റ് ചെയ്ത ഫുൾ ക്വസ്റ്റ്യൻ പേപ്പറും</span> കൂടാതെ ലൈവ് PSC എക്സാമുകളും, നിങ്ങൾക്ക് മാത്രമായി നിങ്ങളെ അറിയുന്ന <span class="text-blue-700 font-bold">AI പേഴ്സണൽ മെന്ററും!</span> കേവലം ഒരു ഊണിന്റെ പൈസയ്ക്ക് സ്വന്തമാക്കൂ...
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#download" class="w-full sm:w-auto gradient-bg text-white font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 transition-all shadow-xl shadow-blue-500/20">
+                        ഇപ്പൊ തന്നെ ഡൗൺലോഡ് ചെയ്യൂ
+                    </a>
+                    <button onclick="showTab('about')" class="w-full sm:w-auto bg-white text-slate-700 font-semibold text-lg px-8 py-4 rounded-xl hover:bg-gray-50 border border-slate-200 transition shadow-sm">
+                        Our Story
+                    </button>
+                </div>
+            </section>
+
+            <!-- Warning / AI Power Notice -->
+            <section class="max-w-4xl mx-auto mb-20">
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+                    <div class="text-4xl">⚠️</div>
+                    <div>
+                        <h3 class="text-amber-900 font-bold text-lg mb-2">ഇത് കേവലം ഒരു ചാറ്റ് ജിപിടിയോ (ChatGPT) ജെമിനിയോ സാധാരണ രീതിയിൽ നൽകുന്ന ക്വസ്റ്റ്യൻ പേപ്പർ അല്ല!</h3>
+                        <p class="text-amber-900/80 text-sm md:text-base leading-relaxed font-medium">
+                            ലക്ഷക്കണക്കിന് ഡാറ്റാ പോയിന്റുകൾ വിശകലനം ചെയ്ത്, ഫുൾ സിലബസും പ്രീവിയസ് ഇയർ ക്വസ്റ്റ്യൻ പേപ്പർ പാറ്റേണുകളും പൂർണ്ണമായി അനലൈസ് ചെയ്ത്, ലോകത്തിലെ ഏറ്റവും ശക്തമായ <span class="text-blue-900 font-bold">Gemini LLM 2.5</span> നൽകുന്ന ക്വസ്റ്റ്യൻ പേപ്പറുകളാണ് ഇത്.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 text-slate-900">എന്തുകൊണ്ട് <span class="gradient-text">AI PSC Jolsyan?</span></h2>
+                    <p class="text-slate-500 font-medium">മറ്റ് കോച്ചിംഗുകളിൽ നിന്നും ഞങ്ങളെ വ്യത്യസ്തമാക്കുന്ന സവിശേഷതകൾ</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="premium-card p-8 rounded-2xl">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-6 border border-blue-100 text-blue-600">📍</div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">കേരളത്തിൽ ആദ്യം</h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
+                            ഇങ്ങനെയൊരു ആപ്പ് കേരളത്തിൽ ആദ്യമായി ഇവിടെ മാത്രം! അത്യാധുനിക AI സാങ്കേതികവിദ്യ ഇനി നിങ്ങളുടെ വിരൽത്തുമ്പയിൽ.
+                        </p>
+                    </div>
+                    <div class="premium-card p-8 rounded-2xl">
+                        <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-2xl mb-6 border border-sky-100 text-sky-600">📝</div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">ലൈവ് പരീക്ഷകൾ</h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
+                            നിങ്ങളുടെ യഥാർത്ഥ കഴിവ് അളക്കാനും സമയക്രമം പാലിക്കാനും സഹായിക്കുന്ന തത്സമയ (Live) PSC പരീക്ഷകൾ.
+                        </p>
+                    </div>
+                    <div class="premium-card p-8 rounded-2xl">
+                        <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-2xl mb-6 border border-indigo-100 text-indigo-600">🤖</div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">24x7 പേഴ്സണൽ മെന്റർഷിപ്പ്</h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
+                            നിങ്ങളുടെ സ്ട്രെങ്തും വീക്ക്നസും കൃത്യമായി വിലയിരുത്തി നിങ്ങളെ ലക്ഷ്യത്തിലേക്ക് വഴിനടത്താൻ ഒരു AI പേഴ്സണൽ മെന്റർ കൂടെയുണ്ടാകും.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black mb-4 text-slate-900"><span class="gradient-text">FAQs</span> - സംശയങ്ങൾക്കുള്ള മറുപടികൾ</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="premium-card p-6 rounded-xl">
+                        <h4 class="text-blue-900 font-bold mb-2">Q: എന്താണ് AI PSC Jolsyan ആപ്പ്?</h4>
+                        <p class="text-slate-600 text-sm md:text-base font-medium">A: കേരളാ PSC പരീക്ഷകൾക്കായി ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ് (AI) ഉപയോഗിച്ച് കൃത്യമായ ചോദ്യങ്ങൾ പ്രെഡിക്റ്റ് ചെയ്യാനും, വ്യക്തിഗത മെന്റർഷിപ്പ് നൽകാനും സഹായിക്കുന്ന കേരളത്തിലെ ആദ്യത്തെ ആപ്പാണിത്.</p>
+                    </div>
+                    <div class="premium-card p-6 rounded-xl">
+                        <h4 class="text-blue-900 font-bold mb-2">Q: ഇത് സാധാരണ ചാറ്റ് ബോറ്റുകളിൽ നിന്നും എങ്ങനെ വ്യത്യസ്തമാകുന്നു?</h4>
+                        <p class="text-slate-600 text-sm md:text-base font-medium">A: ഇത് വെറുമൊരു ChatGPT അല്ലെങ്കിൽ Gemini പ്രോംപ്റ്റ് അല്ല. ലക്ഷക്കണക്കിന് പ്രീവിയസ് ഇയർ ചോദ്യങ്ങളും സിലബസും Gemini LLM 2.5 ന്റെ സഹায়ത്തോടെ ആഴത്തിൽ വിശകലനം ചെയ്ത് നിർമ്മിച്ച പ്രത്യേക സിസ്റ്റമാണിത്.</p>
+                    </div>
+                    <div class="premium-card p-6 rounded-xl">
+                        <h4 class="text-blue-900 font-bold mb-2">Q: ഇതിന്റെ ഫീസ് എത്രയാണ്?</h4>
+                        <p class="text-slate-600 text-sm md:text-base font-medium">A: വെറുമൊരു സാധാരണ ഊണിന്റെ വിലയിൽ, അതായത് വെറും 99 രൂപയ്ക്ക് ഈ ഫീച്ചറുകളെല്ലാം നിങ്ങൾക്ക് ആപ്പിൽ ലഭ്യമാകും.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- TAB 2: ABOUT US -->
+        <div id="about" class="tab-content max-w-4xl mx-auto py-6">
+            <h2 class="text-3xl font-black mb-6 gradient-text">About Us</h2>
+            <div class="premium-card p-8 rounded-2xl space-y-6 text-slate-600 leading-relaxed font-medium">
+                <p>
+                    <strong>AI PSC</strong> is a proud flagship product of <strong>QModify Technologies LLP</strong>. Our firm was officially founded in December 2025 and proudly launched from Bengaluru, the Silicon Valley of India.
+                </p>
+                <p>
+                    Originating from the nation's premier technological and innovation hub, our mission-driven system quickly scaled its reach and now operates across all states in India, empowering thousands of students.
+                </p>
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">How QModify is Transforming Kerala PSC Aspirants' Lives:</h3>
+                <p>
+                    കേരളത്തിലെ ലക്ഷക്കണക്കിന് ഉദ്യോഗാർത്ഥികൾ പരമ്പരാഗതമായ വലിയ കോച്ചിംഗ് ഫീസുകളും ഭാരമേറിയ പുസ്തകക്കെട്ടുകളും കൊണ്ട് ബുദ്ധിമുട്ടുമ്പോൾ, <strong>QModify Technologies</strong> അതിനൊരു സ്മാർട്ട് പരിഹാരം കാണുകയാണ്. അത്യാധുനിക ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ് സങ്കേതങ്ങൾ സാധാരണക്കാർക്കും താങ്ങാവുന്ന വിലയിൽ ലഭ്യമാക്കുക എന്നതാണ് ഞങ്ങളുടെ ലക്ഷ്യം.
+                </p>
+                <p>
+                    <strong>AI PSC Jolsyan</strong> ആപ്പിലൂടെ, ഒരു വിദ്യാർത്ഥിക്ക് അവരുടെ പഠന നിലവാരം (Strength & Weakness) തത്സമയം തിരിച്ചറിയാനും, 24x7 അസിസ്റ്റൻസ് നൽകുന്ന ഒരു AI പേഴ്സണൽ മെന്ററെ സ്വന്തമാക്കാനും സാധിക്കുന്നു. ഇത് നിങ്ങളുടെ സമയത്തെ ലാഭിക്കുന്നതിനോടൊപ്പം കൃത്യമായ ദിശാബോധത്തോടെ സർക്കാർ ജോലി എന്ന സ്വപ്നത്തിലേക്ക് വഴിനടത്തുകയും ചെയ്യുന്നു.
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB 3: OFFERS -->
+        <div id="offers" class="tab-content max-w-4xl mx-auto py-6">
+            <h2 class="text-3xl font-black mb-6 gradient-text">Exclusive Offers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="premium-card p-8 rounded-2xl border-2 border-blue-500/30 relative">
+                    <span class="absolute top-4 right-4 bg-orange-500 text-white font-extrabold px-3 py-1 text-xs rounded-full uppercase">Launch Offer</span>
+                    <h3 class="text-2xl font-black text-blue-900 mb-2">Early Bird Access</h3>
+                    <p class="text-slate-500 mb-6 font-medium">ആദ്യമായി ജോയിൻ ചെയ്യുന്നവർക്കായി സിലബസ് പ്രെഡിക്ഷനും ലൈവ് മോക്ക് ടെസ്റ്റുകളും ഒരുമിച്ച്!</p>
+                    <div class="text-3xl font-black text-blue-700 mb-4">₹99 <span class="text-sm text-gray-400 line-through">₹499</span></div>
+                    <a href="#download" onclick="showTab('home')" class="block text-center gradient-bg text-white font-bold py-2.5 rounded-xl text-sm shadow-md">Claim Now</a>
+                </div>
+                <div class="premium-card p-8 rounded-2xl opacity-60">
+                    <h3 class="text-2xl font-black text-slate-400 mb-2">Mega Premium Pack</h3>
+                    <p class="text-slate-400 mb-6 font-medium">Unlimited AI predictions for multi-level exams. (Coming Soon)</p>
+                    <div class="text-3xl font-black text-slate-300 mb-4">Stay Tuned</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: PRIVACY POLICY -->
+        <div id="privacy" class="tab-content max-w-4xl mx-auto py-6">
+            <h2 class="text-3xl font-black mb-6 gradient-text">Privacy Policy</h2>
+            <div class="premium-card p-8 rounded-2xl text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
+                <p class="text-slate-900 font-semibold">Last Updated: June 2026</p>
+                <p>Welcome to AI PSC Jolsyan, operated by QModify Technologies LLP. We value your privacy and are committed to protecting your personal data.</p>
+                
+                <h3 class="text-slate-900 font-bold mt-4">1. Information We Collect</h3>
+                <p>We may collect basic registration details such as your Name, Email Address, Phone Number, and academic preferences to customize your AI mentoring profile.</p>
+                
+                <h3 class="text-slate-900 font-bold mt-4">2. How We Use Data</h3>
+                <p>Your data is used to provide accurate question predictions, analyze strengths/weaknesses via our Gemini LLM engine, and ensure high accuracy live test experiences.</p>
+                
+                <h3 class="text-slate-900 font-bold mt-4">3. Data Security</h3>
+                <p>We implement secure cloud infrastructure to ensure that your private profile data is protected against unauthorized access.</p>
+                <p class="italic text-blue-600">[Note: You can easily modify or replace this text with your formal legal documentation later.]</p>
+            </div>
+        </div>
+
+        <!-- TAB 5: TERMS & CONDITIONS -->
+        <div id="terms" class="tab-content max-w-4xl mx-auto py-6">
+            <h2 class="text-3xl font-black mb-6 gradient-text">Terms & Conditions</h2>
+            <div class="premium-card p-8 rounded-2xl text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
+                <p class="text-slate-900 font-semibold">Last Updated: June 2026</p>
+                <p>By downloading and using the AI PSC Jolsyan app, you agree to comply with the following legal terms outlined by QModify Technologies LLP.</p>
+                
+                <h3 class="text-slate-900 font-bold mt-4">1. Usage & License</h3>
+                <p>The prediction materials, live papers, and automated mentoring reports provided inside the application are for individual preparation use only. Commercial distribution is prohibited.</p>
+                
+                <h3 class="text-slate-900 font-bold mt-4">2. Payments & Pricing</h3>
+                <p>The current introductory price is ₹99. Payments processed via external secure gateways are non-refundable unless specified otherwise under extreme dynamic platform errors.</p>
+                
+                <h3 class="text-slate-900 font-bold mt-4">3. Disclaimer</h3>
+                <p>Our algorithms provide high-probability predictions based on comprehensive pattern analyses of previous year questions. However, final examination results depend fully on the candidate's dedication and actual PSC board patterns.</p>
+            </div>
+        </div>
+
+        <!-- TAB 6: DELETE ACCOUNT -->
+        <div id="delete-account" class="tab-content max-w-md mx-auto py-6">
+            <h2 class="text-3xl font-black mb-6 text-red-600 text-center">Delete Account</h2>
+            <div class="premium-card p-8 rounded-2xl text-center">
+                <p class="text-slate-600 mb-6 text-sm font-medium">നിങ്ങളുടെ അക്കൗണ്ടും അതുമായി ബന്ധപ്പെട്ട എല്ലാ ഡാറ്റയും ആപ്പിൽ നിന്നും പൂർണ്ണമായി നീക്കം ചെയ്യണോ? താഴെ വിവരങ്ങൾ നൽകി സബ്മിറ്റ് ചെയ്യുക.</p>
+                <form action="mailto:contact@pscjolsyan.in" method="post" enctype="text/plain" class="space-y-4 text-left">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Registered Phone / Email</label>
+                        <input type="text" name="Account To Delete" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Reason for deletion</label>
+                        <textarea name="Reason" rows="3" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl transition shadow-lg">
+                        Confirm Data Deletion Request
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- SHARED HERO DOWNLOAD CONTAINER -->
+        <div id="download-anchor" class="max-w-4xl mx-auto my-16">
+            <div id="download" class="gradient-bg rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-blue-500/15 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">ഇതെല്ലാം ഇപ്പോൾ വെറും 99 രൂപയ്ക്ക്!</h2>
+                <p class="text-white/90 text-lg md:text-xl max-w-xl mx-auto mb-8 font-medium">
+                    നിങ്ങളുടെ സർക്കാർ ജോലി എന്ന സ്വപ്നത്തിലേക്ക് ഒരു സ്മാർട്ട് ചുവടുവെക്കൂ. ഇന്ന് തന്നെ ആപ്പ് ഡൗൺലോഡ് ചെയ്യൂ!
+                </p>
+                
+                <div class="bg-black/10 inline-flex flex-col items-center p-6 rounded-2xl backdrop-blur-md border border-white/20 min-w-[280px]">
+                    <span class="text-xs uppercase tracking-widest text-blue-100 font-bold mb-1">Android & iOS App</span>
+                    <span class="text-xl font-black text-white font-[Plus Jakarta Sans] mb-4">📱 AI PSC Jolsyan</span>
+                    <button class="w-full bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-gray-50 transition shadow-lg flex items-center justify-center gap-2">
+                        <span>Download Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <section class="max-w-xl mx-auto my-16 bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+            <h3 class="text-2xl font-black mb-2 text-center text-slate-900">Contact Us</h3>
+            <p class="text-slate-500 text-sm text-center mb-6 font-medium">ഏതെങ്കിലും തരത്തിലുള്ള സഹായങ്ങൾക്ക് ഞങ്ങൾക്ക് മെയിൽ അയക്കാവുന്നതാണ്</p>
+            
+            <form action="mailto:contact@pscjolsyan.in" method="post" enctype="text/plain" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Name</label>
+                    <input type="text" name="Name" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Email ID</label>
+                    <input type="email" name="Email" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Message</label>
+                    <textarea name="Message" rows="4" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 rounded-xl hover:opacity-90 transition shadow-xl">
+                    Send Mail
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center text-sm text-slate-400 border-t border-slate-200 max-w-7xl mx-auto font-medium">
+        <p>&copy; 2026 AI PSC Jolsyan (QModify Technologies LLP). All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            const targetTab = document.getElementById(tabId);
+            if(targetTab) {
+                targetTab.classList.add('active');
+            }
+
+            const downloadAnchor = document.getElementById('download-anchor');
+            if (tabId === 'home') {
+                downloadAnchor.style.display = 'block';
+            } else {
+                downloadAnchor.style.display = 'none';
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-blue-700', 'border-b-2', 'border-blue-600');
+            });
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
