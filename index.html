@@ -64,22 +64,22 @@
 
     <!-- Header / Navbar -->
     <header class="w-full py-4 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-blue-100 gap-4 sticky top-0 bg-[#f4f8fc]/90 backdrop-blur-md z-50">
-        <div class="flex items-center cursor-pointer" onclick="showTab('home')">
+        <div class="flex items-center cursor-pointer" onclick="navigateTo('/')">
             <!-- FIXED: Assets folder route added for navbar logo -->
             <img src="Assets/Logo.jpg" alt="AI PSC Jolsyan Logo" class="h-12 w-12 rounded-xl object-cover shadow-md mr-3 border border-blue-200">
             <span class="text-xl font-black tracking-wider gradient-text font-[Plus Jakarta Sans] hidden sm:inline">AI PSC Jolsyan</span>
         </div>
         
         <nav class="flex flex-wrap justify-center gap-1 text-sm font-semibold text-gray-600">
-            <button onclick="showTab('home')" class="nav-btn px-4 py-2 rounded-lg text-blue-700 hover:text-blue-500 transition">Home</button>
-            <button onclick="showTab('about')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">About Us</button>
-            <button onclick="showTab('offers')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Offers</button>
-            <button onclick="showTab('privacy')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Privacy Policy</button>
-            <button onclick="showTab('terms')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Terms & Conditions</button>
-            <button onclick="showTab('delete-account')" class="nav-btn px-4 py-2 rounded-lg hover:text-red-500 transition text-red-500">Delete Account</button>
+            <a href="/" onclick="handleNavClick(event, '/')" class="nav-btn px-4 py-2 rounded-lg text-blue-700 hover:text-blue-500 transition">Home</a>
+            <a href="/about-us" onclick="handleNavClick(event, '/about-us')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">About Us</a>
+            <a href="/offers" onclick="handleNavClick(event, '/offers')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Offers</a>
+            <a href="/privacy-policy-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/privacy-policy-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Privacy Policy</a>
+            <a href="/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Terms & Conditions</a>
+            <a href="/delete-account" onclick="handleNavClick(event, '/delete-account')" class="nav-btn px-4 py-2 rounded-lg hover:text-red-500 transition text-red-500">Delete Account</a>
         </nav>
 
-        <a href="#download" onclick="showTab('home')" class="gradient-bg text-white font-bold px-5 py-2 rounded-full text-sm hover:opacity-90 transition shadow-lg shadow-blue-500/20">
+        <a href="#download" onclick="navigateTo('/')" class="gradient-bg text-white font-bold px-5 py-2 rounded-full text-sm hover:opacity-90 transition shadow-lg shadow-blue-500/20">
             Download App
         </a>
     </header>
@@ -139,7 +139,7 @@
                     <a href="#download" class="w-full sm:w-auto gradient-bg text-white font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 transition-all shadow-xl shadow-blue-500/20">
                         ഇപ്പൊ തന്നെ ഡൗൺലോഡ് ചെയ്യൂ
                     </a>
-                    <button onclick="showTab('about')" class="w-full sm:w-auto bg-white text-slate-700 font-semibold text-lg px-8 py-4 rounded-xl hover:bg-gray-50 border border-slate-200 transition shadow-sm">
+                    <button onclick="navigateTo('/about-us')" class="w-full sm:w-auto bg-white text-slate-700 font-semibold text-lg px-8 py-4 rounded-xl hover:bg-gray-50 border border-slate-200 transition shadow-sm">
                         Our Story
                     </button>
                 </div>
@@ -202,7 +202,7 @@
                     </div>
                     <div class="premium-card p-6 rounded-xl">
                         <h4 class="text-blue-900 font-bold mb-2">Q: ഇത് സാധാരണ ചാറ്റ് ബോറ്റുകളിൽ നിന്നും എങ്ങനെ വ്യത്യസ്തമാകുന്നു?</h4>
-                        <p class="text-slate-600 text-sm md:text-base font-medium">A: ഇത് വെറുമൊരു ChatGPT അല്ലെങ്കിൽ Gemini പ്രോംപ്റ്റ് അല്ല. ലക്ഷക്കണക്കിന് പ്രീവിയസ് ഇയർ ചോദ്യങ്ങളും സിലബസും Gemini LLM 2.5 ന്റെ സഹায়ത്തോടെ ആഴത്തിൽ വിശകലനം ചെയ്ത് നിർമ്മിച്ച പ്രത്യേക സിസ്റ്റമാണിത്.</p>
+                        <p class="text-slate-600 text-sm md:text-base font-medium">A: ഇത് വെറുമൊരു ChatGPT അല്ലെങ്കിൽ Gemini പ്രോംപ്റ്റ് അല്ല. ലക്ഷക്കണക്കിന് പ്രീവിയസ് ഇയർ ചോദ്യങ്ങളും സിലബസും Gemini LLM 2.5 ന്റെ സഹായത്തോടെ ആഴത്തിൽ വിശകലനം ചെയ്ത് നിർമ്മിച്ച പ്രത്യേക സിസ്റ്റമാണിത്.</p>
                     </div>
                     <div class="premium-card p-6 rounded-xl">
                         <h4 class="text-blue-900 font-bold mb-2">Q: ഇതിന്റെ ഫീസ് എത്രയാണ്?</h4>
@@ -242,7 +242,7 @@
                     <h3 class="text-2xl font-black text-blue-900 mb-2">Early Bird Access</h3>
                     <p class="text-slate-500 mb-6 font-medium">ആദ്യമായി ജോയിൻ ചെയ്യുന്നവർക്കായി സിലബസ് പ്രെഡിക്ഷനും ലൈവ് മോക്ക് ടെസ്റ്റുകളും ഒരുമിച്ച്!</p>
                     <div class="text-3xl font-black text-blue-700 mb-4">₹99 <span class="text-sm text-gray-400 line-through">₹499</span></div>
-                    <a href="#download" onclick="showTab('home')" class="block text-center gradient-bg text-white font-bold py-2.5 rounded-xl text-sm shadow-md">Claim Now</a>
+                    <a href="#download" onclick="navigateTo('/')" class="block text-center gradient-bg text-white font-bold py-2.5 rounded-xl text-sm shadow-md">Claim Now</a>
                 </div>
                 <div class="premium-card p-8 rounded-2xl opacity-60">
                     <h3 class="text-2xl font-black text-slate-400 mb-2">Mega Premium Pack</h3>
@@ -362,7 +362,23 @@
     </footer>
 
     <script>
-        function showTab(tabId) {
+        // Route map linking paths to tab IDs
+        const routes = {
+            '/': 'home',
+            '/about-us': 'about',
+            '/offers': 'offers',
+            '/privacy-policy-ai-psc-jolsyan-for-kerala-psc': 'privacy',
+            '/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc': 'terms',
+            '/delete-account': 'delete-account'
+        };
+
+        function getTabFromPath(path) {
+            // Trim trailing slashes for comparison
+            const cleanPath = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+            return routes[cleanPath] || 'home';
+        }
+
+        function renderTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
             
@@ -378,13 +394,32 @@
                 downloadAnchor.style.display = 'none';
             }
 
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(btn => {
-                btn.classList.remove('text-blue-700', 'border-b-2', 'border-blue-600');
-            });
-            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        function navigateTo(path) {
+            window.history.pushState({}, "", path);
+            const tabId = getTabFromPath(path);
+            renderTab(tabId);
+        }
+
+        function handleNavClick(event, path) {
+            event.preventDefault();
+            navigateTo(path);
+        }
+
+        // Handle Browser Back/Forward buttons
+        window.addEventListener('popstate', () => {
+            const tabId = getTabFromPath(window.location.pathname);
+            renderTab(tabId);
+        });
+
+        // Initialize tab on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname;
+            const tabId = getTabFromPath(currentPath);
+            renderTab(tabId);
+        });
     </script>
 </body>
 </html>
