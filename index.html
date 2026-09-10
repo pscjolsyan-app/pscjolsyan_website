@@ -362,6 +362,15 @@
     </footer>
 
     <script>
+        // Check for redirected route from 404.html
+        (function() {
+            var redirect = window.location.search.match(/^[?&]\/(.*)$/);
+            if (redirect) {
+                var newPath = '/' + redirect[1].replace(/~and~/g, '&');
+                window.history.replaceState(null, null, newPath);
+            }
+        })();
+
         // Route map linking paths to tab IDs
         const routes = {
             '/': 'home',
