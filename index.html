@@ -554,23 +554,22 @@
             <p class="text-slate-500 text-sm text-center mb-6">Have questions or need assistance? Send us a message.</p>
             
             <!-- MAILING TO contact@pscjolsyan.in -->
-            <form action="mailto:contact@pscjolsyan.in" method="post" enctype="text/plain" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Name</label>
-                    <input type="text" name="Name" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Email ID</label>
-                    <input type="email" name="Email" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Message</label>
-                    <textarea name="Message" rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500"></textarea>
-                </div>
-                <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 rounded-xl hover:opacity-95 transition shadow-lg">
-                    Send Message
-                </button>
-            </form>
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
+    <input type="hidden" name="access_key" value="9889bf61-1f8a-414b-a9a6-90656740f295">
+    <input type="hidden" name="subject" value="Account Deletion Request - PrashnaBodhi">
+
+    <div>
+        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Registered Phone / Email</label>
+        <input type="text" name="user_account" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
+    </div>
+    <div>
+        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Reason for deletion</label>
+        <textarea name="reason" rows="3" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
+        Confirm Data Deletion Request
+    </button>
+</form>
         </section>
 
     </main>
