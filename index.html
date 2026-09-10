@@ -44,7 +44,6 @@
             display: block;
         }
         
-        /* Floating badge animation */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-8px); }
@@ -59,7 +58,6 @@
     <!-- Header / Navbar -->
     <header class="w-full py-4 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-slate-200/80 gap-4 sticky top-0 bg-[#f8fafc]/90 backdrop-blur-md z-50">
         <div class="flex items-center cursor-pointer" onclick="navigateTo('/')">
-            <!-- APP LOGO (Replace Assets/Logo.jpg with your new logo image file) -->
             <img src="Assets/Logo.jpg" alt="PrashnaBodhi Logo" class="h-11 w-11 rounded-xl object-cover shadow-md mr-3 border border-blue-200">
             <div class="flex flex-col">
                 <span class="text-xl font-extrabold tracking-tight gradient-text">PrashnaBodhi</span>
@@ -71,8 +69,8 @@
             <a href="/" onclick="handleNavClick(event, '/')" class="nav-btn px-3 py-2 rounded-lg text-blue-700 hover:bg-blue-50 transition">Home</a>
             <a href="/about-us" onclick="handleNavClick(event, '/about-us')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">About Us</a>
             <a href="/offers" onclick="handleNavClick(event, '/offers')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Offers</a>
-            <a href="/privacy-policy-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/privacy-policy-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Privacy Policy</a>
-            <a href="/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Terms & Conditions</a>
+            <a href="/privacy-policy" onclick="handleNavClick(event, '/privacy-policy')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Privacy Policy</a>
+            <a href="/terms-and-conditions" onclick="handleNavClick(event, '/terms-and-conditions')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Terms & Conditions</a>
             <a href="/delete-account" onclick="handleNavClick(event, '/delete-account')" class="nav-btn px-3 py-2 rounded-lg text-red-500 hover:bg-red-50 transition">Delete Account</a>
         </nav>
 
@@ -92,11 +90,9 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-sky-500/10 to-teal-500/10 blur-3xl -z-10 rounded-full max-w-3xl mx-auto h-80 top-0"></div>
                 
                 <div class="flex justify-center mb-6">
-                    <!-- APP LOGO IN HERO -->
                     <img src="Assets/Logo.jpg" alt="PrashnaBodhi Logo" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-3xl border-4 border-white shadow-[0_20px_50px_rgba(37,99,235,0.2)] bg-white animate-float">
                 </div>
 
-                <!-- BADGES CONTAINER WITH HERITAGE TAG -->
                 <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
                     <div class="inline-flex items-center gap-2 bg-blue-100/80 text-blue-800 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm border border-blue-200 backdrop-blur-sm">
                         <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-ping"></span>
@@ -116,7 +112,7 @@
                     Quality exam preparation shouldn't come with a steep price tag. <span class="text-slate-900 font-semibold">PrashnaBodhi</span> brings hyper-personalized AI mentoring, live practice modules, multi-lingual learning, and gamified practice to every aspirant across India.
                 </p>
 
-                <!-- SEPARATE STORE BUTTONS -->
+                <!-- Store Buttons -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-md mx-auto">
                     <a href="https://play.google.com/store/apps/details?id=in.pscjolsyan.app&hl=en" target="_blank" class="w-full sm:w-1/2 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-5 rounded-2xl flex items-center justify-center gap-3 transition shadow-lg">
                         <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
@@ -136,11 +132,10 @@
                 </div>
             </section>
 
-            <!-- Video & AI Tech Highlight -->
+            <!-- Video Section with Updated YouTube ID -->
             <section class="max-w-5xl mx-auto mb-20 offer-card rounded-3xl p-6 md:p-8 overflow-hidden relative border border-slate-200">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
                     <div class="relative w-full aspect-video rounded-2xl border border-slate-200 bg-slate-900 overflow-hidden shadow-xl">
-                        <!-- YOUTUBE VIDEO EMBED (Replace VIDEO_ID with your new YouTube video ID) -->
                         <iframe 
                             class="w-full h-full" 
                             src="https://www.youtube.com/embed/Gf7ymG5buP4?rel=0&modestbranding=1" 
@@ -161,7 +156,7 @@
                 </div>
             </section>
 
-            <!-- WHAT WE OFFER SECTION (6 Uniform Feature Cards) -->
+            <!-- WHAT WE OFFER -->
             <section class="mb-20">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">
@@ -174,13 +169,10 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Card 1: Comprehensive Digital Classes -->
                     <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
                         <div>
                             <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-blue-500/20">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                             </div>
                             <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md">900+ Topics</span>
                             <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Comprehensive Digital Classes</h3>
@@ -193,13 +185,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Post-Class Quizzes -->
                     <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
                         <div>
                             <div class="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-sky-500/20">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
                             <span class="text-xs font-semibold text-sky-600 uppercase tracking-wider bg-sky-50 px-2.5 py-1 rounded-md">Instant Feedback</span>
                             <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Post-Class Quizzes</h3>
@@ -212,13 +201,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Extensive Practice Library -->
                     <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
                         <div>
                             <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-teal-500/20">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                                </svg>
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                             </div>
                             <span class="text-xs font-semibold text-teal-600 uppercase tracking-wider bg-teal-50 px-2.5 py-1 rounded-md">3,000+ Questions</span>
                             <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Extensive Practice Library</h3>
@@ -231,13 +217,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 4: Personalized AI Mentor -->
                     <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
                         <div>
                             <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-purple-500/20">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
                             <span class="text-xs font-semibold text-purple-600 uppercase tracking-wider bg-purple-50 px-2.5 py-1 rounded-md">24/7 AI Guidance</span>
                             <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Personalized AI Mentor</h3>
@@ -250,13 +233,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 5: Gamified Battle Arena -->
                     <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
                         <div>
                             <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-amber-500/20">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                             </div>
                             <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md">Gamified Arena</span>
                             <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Battle Arena</h3>
@@ -269,13 +249,10 @@
                         </div>
                     </div>
 
-                    <!-- NEW Card 6: Learn in Your Language -->
                     <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between border-2 border-indigo-200">
                         <div>
                             <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-rose-500/20">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.198 16.518 5 20"></path>
-                                </svg>
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.198 16.518 5 20"></path></svg>
                             </div>
                             <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider bg-rose-50 px-2.5 py-1 rounded-md">Multi-Lingual Prep</span>
                             <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Learn in Your Language</h3>
@@ -296,30 +273,6 @@
                         </div>
                     </div>
 
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto mb-20">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold mb-3 text-slate-900">
-                        Frequently Asked <span class="gradient-text">Questions</span>
-                    </h2>
-                    <p class="text-slate-500 font-medium">Clear answers to help you get started with PrashnaBodhi</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="offer-card p-6 rounded-2xl">
-                        <h4 class="text-blue-900 font-bold mb-2 text-base">Q: What exams does PrashnaBodhi cover?</h4>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">A: PrashnaBodhi is explicitly curated for Railway Recruitment Board (RRB NTPC, Group D, ALP, JE) and Staff Selection Commission (SSC CGL, CHSL, MTS, GD) as well as central government examinations across India.</p>
-                    </div>
-                    <div class="offer-card p-6 rounded-2xl">
-                        <h4 class="text-blue-900 font-bold mb-2 text-base">Q: How does the AI Mentor work?</h4>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">A: Our AI Mentor tracks your post-class quiz results and model test performance in real-time, highlighting your specific weak spots and suggesting personalized topic reviews.</p>
-                    </div>
-                    <div class="offer-card p-6 rounded-2xl">
-                        <h4 class="text-blue-900 font-bold mb-2 text-base">Q: Can I prepare in my regional language?</h4>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">A: Yes! PrashnaBodhi offers full digital classes, mock tests, and AI assistance in English, हिंदी, தமிழ், ಕನ್ನಡ, മലയാളം, and తెలుగు.</p>
-                    </div>
                 </div>
             </section>
 
@@ -356,22 +309,20 @@
             </div>
         </div>
 
-        <!-- TAB 3: OFFERS SECTION (UPDATED FULL PRICING & B2B) -->
+        <!-- TAB 3: OFFERS SECTION -->
         <div id="offers" class="tab-content max-w-5xl mx-auto py-6">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-3xl md:text-4xl font-extrabold mb-3 gradient-text">Exam Packages & Pricing</h2>
                 <p class="text-slate-600">Choose your targeted course or unlock all central government exams with the All-Exams Bundle.</p>
             </div>
 
-            <!-- Individual & Bundle Course Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 
-                <!-- Package 1: RRB NTPC -->
                 <div class="offer-card p-6 rounded-3xl flex flex-col justify-between relative border border-slate-200">
                     <div>
                         <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md">Individual Course</span>
                         <h3 class="text-xl font-extrabold text-slate-900 mt-3 mb-1">RRB NTPC</h3>
-                        <p class="text-xs text-slate-500 mb-4">Complete syllabus-oriented coaching, mock tests, AI mentorship, and a Gamified Arena with multi-language support for NTPC CBT 1 & 2.</p>
+                        <p class="text-xs text-slate-500 mb-4">Complete coaching, mock tests & AI mentorship for NTPC CBT 1 & 2.</p>
                         
                         <div class="mb-4">
                             <div class="text-3xl font-black text-slate-900">₹799</div>
@@ -381,12 +332,11 @@
                     <a href="https://play.google.com/store/apps/details?id=in.pscjolsyan.app&hl=en" target="_blank" class="block text-center bg-slate-900 text-white font-bold py-2.5 rounded-xl text-xs hover:bg-slate-800 transition">Get Started</a>
                 </div>
 
-                <!-- Package 2: RRB Group D / ALP -->
                 <div class="offer-card p-6 rounded-3xl flex flex-col justify-between relative border border-slate-200">
                     <div>
                         <span class="text-[10px] font-bold uppercase tracking-wider bg-sky-50 text-sky-700 px-2.5 py-1 rounded-md">Individual Course</span>
                         <h3 class="text-xl font-extrabold text-slate-900 mt-3 mb-1">RRB Group D / ALP</h3>
-                        <p class="text-xs text-slate-500 mb-4">Complete syllabus-oriented coaching, mock tests, AI mentorship, and a Gamified Arena with multi-language support for Railway Group D & Assistant Loco Pilot.</p>
+                        <p class="text-xs text-slate-500 mb-4">Syllabus coverage & practice tests for Railway Group D & Assistant Loco Pilot.</p>
                         
                         <div class="mb-4">
                             <div class="text-3xl font-black text-slate-900">₹799</div>
@@ -396,12 +346,11 @@
                     <a href="https://play.google.com/store/apps/details?id=in.pscjolsyan.app&hl=en" target="_blank" class="block text-center bg-slate-900 text-white font-bold py-2.5 rounded-xl text-xs hover:bg-slate-800 transition">Get Started</a>
                 </div>
 
-                <!-- Package 3: SSC CGL/CHSL/MTS -->
                 <div class="offer-card p-6 rounded-3xl flex flex-col justify-between relative border border-slate-200">
                     <div>
                         <span class="text-[10px] font-bold uppercase tracking-wider bg-teal-50 text-teal-700 px-2.5 py-1 rounded-md">Individual Course</span>
                         <h3 class="text-xl font-extrabold text-slate-900 mt-3 mb-1">SSC CGL / CHSL / MTS</h3>
-                        <p class="text-xs text-slate-500 mb-4">Complete syllabus-oriented coaching, mock tests, AI mentorship, and a Gamified Arena with multi-language support for all major Staff Selection Commission exams.</p>
+                        <p class="text-xs text-slate-500 mb-4">Comprehensive preparation for all major Staff Selection Commission exams.</p>
                         
                         <div class="mb-4">
                             <div class="text-3xl font-black text-slate-900">₹799</div>
@@ -411,7 +360,6 @@
                     <a href="https://play.google.com/store/apps/details?id=in.pscjolsyan.app&hl=en" target="_blank" class="block text-center bg-slate-900 text-white font-bold py-2.5 rounded-xl text-xs hover:bg-slate-800 transition">Get Started</a>
                 </div>
 
-                <!-- Package 4: ALL EXAMS BUNDLE (Best Value) -->
                 <div class="offer-card p-6 rounded-3xl flex flex-col justify-between relative border-2 border-blue-600 bg-gradient-to-b from-blue-50/50 to-white shadow-xl">
                     <span class="absolute -top-3 right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold px-3 py-0.5 text-[10px] rounded-full uppercase tracking-wider shadow">Best Value</span>
                     <div>
@@ -429,7 +377,7 @@
 
             </div>
 
-            <!-- B2B Coaching Partnership Banner -->
+            <!-- B2B Partnership Banner -->
             <div class="offer-card p-8 rounded-3xl bg-slate-900 text-white relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="max-w-xl">
                     <span class="bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider">Coaching Institute Partnership</span>
@@ -457,10 +405,7 @@
                 <h3 class="text-slate-900 font-bold text-base mt-4">2. Use of AI Analytics & Performance Data</h3>
                 <p>Your performance in quizzes, mock tests, and Battle Arena sessions is processed by our AI algorithms solely to calculate real-time proficiency scores, highlight weak topics, and generate custom study schedules.</p>
 
-                <h3 class="text-slate-900 font-bold text-base mt-4">3. Referral Program Data</h3>
-                <p>When you share or use a referral code for course discounts, we record referral connections to apply eligible pricing deductions (₹99 off individual courses, ₹199 off All-Exams Bundle).</p>
-                
-                <h3 class="text-slate-900 font-bold text-base mt-4">4. Data Security & Storage</h3>
+                <h3 class="text-slate-900 font-bold text-base mt-4">3. Data Security & Storage</h3>
                 <p>We implement secure encrypted server connections and industry-standard cloud protection to ensure your private user data remains strictly protected against unauthorized access.</p>
             </div>
         </div>
@@ -475,44 +420,37 @@
                 <h3 class="text-slate-900 font-bold text-base mt-4">1. License & Educational Usage</h3>
                 <p>All digital classes, downloadable PDF notes, practice questions, and AI mentor outputs are licensed for your personal, non-commercial exam preparation only. Commercial reproduction, scraping, or sharing of account credentials is strictly prohibited.</p>
 
-                <h3 class="text-slate-900 font-bold text-base mt-4">2. Pricing, Discounts & Referral Codes</h3>
-                <p>Standard course pricing is set at ₹799 for individual exam modules (RRB NTPC, RRB Group D/ALP, SSC CGL/CHSL/MTS) and ₹1,499 for the All Exams Bundle. Referral discount codes unlock ₹99 off individual modules and ₹199 off the bundle upon validation at checkout.</p>
-
-                <h3 class="text-slate-900 font-bold text-base mt-4">3. Institutional Partnerships</h3>
-                <p>Bulk pricing agreements with coaching institutes (ranging between ₹599 and ₹799 per student bundle) are subject to separate formal service agreements executed with QMODIFY TECHNOLOGIES LLP.</p>
-                
-                <h3 class="text-slate-900 font-bold text-base mt-4">4. Disclaimer</h3>
+                <h3 class="text-slate-900 font-bold text-base mt-4">2. Disclaimer</h3>
                 <p>PrashnaBodhi is an independent AI educational technology platform and is not affiliated with or endorsed by official government examination bodies such as the Railway Recruitment Board (RRB) or Staff Selection Commission (SSC).</p>
             </div>
         </div>
 
-        <!-- TAB 6: DELETE ACCOUNT -->
+        <!-- TAB 6: DELETE ACCOUNT FORM -->
         <div id="delete-account" class="tab-content max-w-md mx-auto py-6">
             <h2 class="text-3xl font-extrabold mb-6 text-red-600 text-center">Delete Account</h2>
             <div class="offer-card p-8 rounded-3xl text-center">
                 <p class="text-slate-600 mb-6 text-sm">Would you like to permanently remove your account and associated study data from PrashnaBodhi? Submit your registered info below.</p>
                 
-            <!-- MAILING TO contact@pscjolsyan.in -->
-<form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
-    <input type="hidden" name="access_key" value="9889bf61-1f8a-414b-a9a6-90656740f295">
-    <input type="hidden" name="subject" value="Account Deletion Request - PrashnaBodhi">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="Account Deletion Request - PrashnaBodhi">
 
-    <div>
-        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Registered Phone / Email</label>
-        <input type="text" name="user_account" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
-    </div>
-    <div>
-        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Reason for deletion</label>
-        <textarea name="reason" rows="3" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
-    </div>
-    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
-        Confirm Data Deletion Request
-    </button>
-</form>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Registered Phone / Email</label>
+                        <input type="text" name="user_account" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Reason for deletion</label>
+                        <textarea name="reason" rows="3" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
+                        Confirm Data Deletion Request
+                    </button>
+                </form>
             </div>
         </div>
 
-        <!-- SHARED DOWNLOAD CTA SECTION WITH BOTH STORE BUTTONS -->
+        <!-- SHARED DOWNLOAD CTA -->
         <div id="download-anchor" class="max-w-4xl mx-auto my-16">
             <div id="download" class="gradient-bg rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-blue-500/20 relative overflow-hidden text-white">
                 <div class="absolute -right-10 -top-10 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
@@ -522,7 +460,6 @@
                     Get full access to AI classes, practice tests, multi-lingual prep, and personalized mentoring. Built for aspirants across all of India.
                 </p>
                 
-                <!-- SEPARATE APP STORE & PLAY STORE CTA -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-md mx-auto">
                     <a href="https://play.google.com/store/apps/details?id=in.pscjolsyan.app&hl=en" target="_blank" class="w-full sm:w-1/2 bg-white text-slate-900 font-semibold py-3 px-5 rounded-2xl flex items-center justify-center gap-3 transition shadow-lg hover:bg-slate-100">
                         <svg class="w-7 h-7 fill-current text-slate-900" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
@@ -543,32 +480,31 @@
             </div>
         </div>
 
-       <!-- MAILING TO contact@pscjolsyan.in -->
-<form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-    <!-- Paste your Web3Forms Access Key here -->
-    <input type="hidden" name="access_key" value="9889bf61-1f8a-414b-a9a6-90656740f295">
-    <input type="hidden" name="subject" value="New Contact Form Submission - PrashnaBodhi">
-
-            <section id="contact" class="max-w-xl mx-auto my-16 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <!-- Contact Form -->
+        <section id="contact" class="max-w-xl mx-auto my-16 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
             <h3 class="text-2xl font-black mb-2 text-center text-slate-900">Contact Us</h3>
             <p class="text-slate-500 text-sm text-center mb-6">Have questions or need assistance? Send us a message.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="hidden" name="subject" value="New Contact Inquiry - PrashnaBodhi">
 
-    <div>
-        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Name</label>
-        <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
-    </div>
-    <div>
-        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Email ID</label>
-        <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
-    </div>
-    <div>
-        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Message</label>
-        <textarea name="message" rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500"></textarea>
-    </div>
-    <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 rounded-xl hover:opacity-95 transition shadow-lg">
-        Send Message
-    </button>
-</form>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Name</label>
+                    <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Email ID</label>
+                    <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Message</label>
+                    <textarea name="message" rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 rounded-xl hover:opacity-95 transition shadow-lg">
+                    Send Message
+                </button>
+            </form>
         </section>
 
     </main>
@@ -588,13 +524,13 @@
             }
         })();
 
-        // Route map matching exact path routes
+        // Clean, updated routes matching prashnabodhi.in
         const routes = {
             '/': 'home',
             '/about-us': 'about',
             '/offers': 'offers',
-            '/privacy-policy-ai-psc-jolsyan-for-kerala-psc': 'privacy',
-            '/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc': 'terms',
+            '/privacy-policy': 'privacy',
+            '/terms-and-conditions': 'terms',
             '/delete-account': 'delete-account'
         };
 
@@ -633,13 +569,11 @@
             navigateTo(path);
         }
 
-        // Handle Browser Back/Forward buttons
         window.addEventListener('popstate', () => {
             const tabId = getTabFromPath(window.location.pathname);
             renderTab(tabId);
         });
 
-        // Initialize tab on page load
         window.addEventListener('DOMContentLoaded', () => {
             const currentPath = window.location.pathname;
             const tabId = getTabFromPath(currentPath);
