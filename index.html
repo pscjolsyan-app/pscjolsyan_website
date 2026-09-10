@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI PSC Jolsyan - കേരളത്തിലെ ആദ്യത്തെ AI PSC മെന്റർ</title>
+    <title>PrashnaBodhi - India's Premier AI Coaching Platform for RRB & SSC Exams</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Added Noto Serif Malayalam for stylish look and Plus Jakarta Sans for English -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Plus Jakarta Sans for crisp modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Noto Serif Malayalam', 'Plus Jakarta Sans', sans-serif;
-            background-color: #f4f8fc; /* App Matching Light-Blue Clean Background */
-            color: #1e293b;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
             scroll-behavior: smooth;
         }
-        /* Color gradients synced from your App Welcome & Downloads screen */
         .gradient-text {
-            background: linear-gradient(135deg, #1d4ed8, #0284c7);
+            background: linear-gradient(135deg, #2563eb, #0284c7, #0d9488);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #1d4ed8, #0284c7); /* App Sign In Blue */
+            background: linear-gradient(135deg, #1d4ed8, #0284c7);
         }
-        .premium-card {
+        .hero-gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        }
+        .offer-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.05);
+            box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .premium-card:hover {
+        .offer-card:hover {
             border-color: #3b82f6;
-            transform: translateY(-4px);
-            transition: all 0.3s ease;
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.18);
         }
         .tab-content {
             display: none;
@@ -41,63 +44,87 @@
             display: block;
         }
         
-        /* CSS Animation for AI Human Scanner Robot */
-        @keyframes scan {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-10px) scale(1.02); }
+        /* Floating badge animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
         }
-        @keyframes laser {
-            0%, 100% { top: 15%; opacity: 0.3; }
-            50% { top: 85%; opacity: 1; }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
         }
-        @keyframes float-paper {
-            0% { transform: translateY(20px); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(-40px); opacity: 0; }
-        }
-        .ai-bot { animation: scan 4s ease-in-out infinite; }
-        .laser-line { animation: laser 2.5s linear infinite; }
-        .printed-paper { animation: float-paper 3s linear infinite; }
     </style>
 </head>
 <body class="antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="w-full py-4 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-blue-100 gap-4 sticky top-0 bg-[#f4f8fc]/90 backdrop-blur-md z-50">
+    <header class="w-full py-4 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-slate-200/80 gap-4 sticky top-0 bg-[#f8fafc]/90 backdrop-blur-md z-50">
         <div class="flex items-center cursor-pointer" onclick="navigateTo('/')">
-            <!-- FIXED: Assets folder route added for navbar logo -->
-            <img src="Assets/Logo.jpg" alt="AI PSC Jolsyan Logo" class="h-12 w-12 rounded-xl object-cover shadow-md mr-3 border border-blue-200">
-            <span class="text-xl font-black tracking-wider gradient-text font-[Plus Jakarta Sans] hidden sm:inline">AI PSC Jolsyan</span>
+            <img src="Assets/Logo.jpg" alt="PrashnaBodhi Logo" class="h-11 w-11 rounded-xl object-cover shadow-md mr-3 border border-blue-200">
+            <div class="flex flex-col">
+                <span class="text-xl font-extrabold tracking-tight gradient-text">PrashnaBodhi</span>
+                <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">AI Exam Prep</span>
+            </div>
         </div>
         
-        <nav class="flex flex-wrap justify-center gap-1 text-sm font-semibold text-gray-600">
-            <a href="/" onclick="handleNavClick(event, '/')" class="nav-btn px-4 py-2 rounded-lg text-blue-700 hover:text-blue-500 transition">Home</a>
-            <a href="/about-us" onclick="handleNavClick(event, '/about-us')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">About Us</a>
-            <a href="/offers" onclick="handleNavClick(event, '/offers')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Offers</a>
-            <a href="/privacy-policy-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/privacy-policy-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Privacy Policy</a>
-            <a href="/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-4 py-2 rounded-lg hover:text-blue-500 transition">Terms & Conditions</a>
-            <a href="/delete-account" onclick="handleNavClick(event, '/delete-account')" class="nav-btn px-4 py-2 rounded-lg hover:text-red-500 transition text-red-500">Delete Account</a>
+        <nav class="flex flex-wrap justify-center gap-1 text-sm font-semibold text-slate-600">
+            <a href="/" onclick="handleNavClick(event, '/')" class="nav-btn px-3 py-2 rounded-lg text-blue-700 hover:bg-blue-50 transition">Home</a>
+            <a href="/about-us" onclick="handleNavClick(event, '/about-us')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">About Us</a>
+            <a href="/offers" onclick="handleNavClick(event, '/offers')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Offers</a>
+            <a href="/privacy-policy-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/privacy-policy-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Privacy Policy</a>
+            <a href="/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc" onclick="handleNavClick(event, '/terms-and-conditions-ai-psc-jolsyan-for-kerala-psc')" class="nav-btn px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">Terms & Conditions</a>
+            <a href="/delete-account" onclick="handleNavClick(event, '/delete-account')" class="nav-btn px-3 py-2 rounded-lg text-red-500 hover:bg-red-50 transition">Delete Account</a>
         </nav>
 
-        <a href="#download" onclick="navigateTo('/')" class="gradient-bg text-white font-bold px-5 py-2 rounded-full text-sm hover:opacity-90 transition shadow-lg shadow-blue-500/20">
-            Download App
+        <a href="#download" onclick="navigateTo('/')" class="gradient-bg text-white font-bold px-6 py-2.5 rounded-full text-sm hover:shadow-lg hover:shadow-blue-500/25 transition-all">
+            Get Started Free
         </a>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-8">
+    <main class="max-w-7xl mx-auto px-4 md:px-6 py-8">
 
         <!-- TAB 1: HOME PAGE -->
         <div id="home" class="tab-content active">
             
-            <!-- Animated AI Computer Human Concept (Top Feature) -->
-            <section class="max-w-4xl mx-auto mb-16 mt-4 premium-card rounded-3xl p-8 overflow-hidden relative border border-blue-100">
-                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                    <!-- FIXED YOUTUBE PLAYER: Standard Embed Pattern with controls enabled to prevent local restrictions -->
-                    <div class="relative w-full aspect-video md:h-64 rounded-2xl border border-gray-200 bg-black overflow-hidden shadow-xl">
+            <!-- Hero Section -->
+            <section class="text-center relative py-12 md:py-16">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-sky-500/10 to-teal-500/10 blur-3xl -z-10 rounded-full max-w-3xl mx-auto h-80 top-0"></div>
+                
+                <div class="flex justify-center mb-6">
+                    <img src="Assets/Logo.jpg" alt="PrashnaBodhi Logo" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-3xl border-4 border-white shadow-[0_20px_50px_rgba(37,99,235,0.2)] bg-white animate-float">
+                </div>
+
+                <div class="inline-flex items-center gap-2 bg-blue-100/80 text-blue-800 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-6 border border-blue-200 backdrop-blur-sm">
+                    <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-ping"></span>
+                    <span>Empowering RRB & SSC Aspirants Across India</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-6 text-slate-900">
+                    Democratizing AI Coaching for <br class="hidden sm:inline">
+                    <span class="gradient-text">RRB, SSC & Central Govt Exams</span>
+                </h1>
+                
+                <p class="text-base md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
+                    Quality exam preparation shouldn't come with a steep price tag. <span class="text-slate-900 font-semibold">PrashnaBodhi</span> brings hyper-personalized AI mentoring, live practice modules, and gamified learning to every tier-2, tier-3, and ambitious student across India.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#download" class="w-full sm:w-auto gradient-bg text-white font-bold text-base px-8 py-4 rounded-xl hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 transition-all">
+                        Download App Now
+                    </a>
+                    <button onclick="navigateTo('/about-us')" class="w-full sm:w-auto bg-white text-slate-700 font-semibold text-base px-8 py-4 rounded-xl hover:bg-slate-50 border border-slate-200 transition shadow-sm">
+                        Discover Our Mission
+                    </button>
+                </div>
+            </section>
+
+            <!-- Video & AI Tech Highlight -->
+            <section class="max-w-5xl mx-auto mb-20 offer-card rounded-3xl p-6 md:p-8 overflow-hidden relative border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+                    <div class="relative w-full aspect-video rounded-2xl border border-slate-200 bg-slate-900 overflow-hidden shadow-xl">
                         <iframe 
                             class="w-full h-full" 
                             src="https://www.youtube.com/embed/ohmHHsBdY10?rel=0&modestbranding=1" 
-                            title="AI PSC Jolsyan Video Animation" 
+                            title="PrashnaBodhi AI Overview Video" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
@@ -105,108 +132,146 @@
                     </div>
 
                     <div>
-                        <h3 class="text-2xl font-black mb-3 text-blue-900 font-[Plus Jakarta Sans]">Advanced AI Syllabus Scanning</h3>
-                        <p class="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
-                            ഞങ്ങളുടെ അത്യാധുനിക AI ഹ്യൂമൻ സിസ്റ്റം കേരള PSC സിലബസുകളും മുൻകാല ചോദ്യപേപ്പറുകളും ഒരു മാഗ്നിഫയിംഗ് ലെൻസിലൂടെ എന്നോണം സൂക്ഷ്മമായി സ്കാൻ ചെയ്ത് വിശകലനം ചെയ്യുന്നു. നിമിഷങ്ങൾക്കകം വരാൻ സാധ്യതയുള്ള ചോദ്യപേപ്പറുകൾ പ്രിന്റ് ചെയ്ത് നൽകാൻ കെൽപ്പുള്ളതാണ് ഈ ടെക്നോളജി!
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Smart Intelligence</span>
+                        <h3 class="text-2xl font-extrabold mt-3 mb-3 text-slate-900">Advanced Syllabus & Pattern Analytics</h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                            Our proprietary AI system processes thousands of previous year question trends, syllabus updates, and topic weightages across RRB NTPC, Group D, SSC CGL, CHSL, and MTS exams to keep your prep focused on high-yield topics.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Hero Section -->
-            <section class="text-center relative pb-16">
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 blur-3xl -z-10 rounded-full max-w-2xl mx-auto h-72 top-0"></div>
-                
-                <!-- FIXED: Assets folder route added for big artwork logo -->
-                <div class="flex justify-center mb-6">
-                    <img src="Assets/Logo.jpg" alt="AI PSC Jolsyan Artwork" class="w-48 h-48 md:w-60 md:h-60 object-contain rounded-full border-4 border-white shadow-[0_15px_40px_rgba(29,78,216,0.15)] bg-white">
-                </div>
-
-                <span class="inline-block bg-amber-100 text-amber-800 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-amber-200 tracking-wide">
-                    🚀 കേരളത്തിൽ ആദ്യമായി!
-                </span>
-                
-                <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6 text-slate-900">
-                    വെറുമൊരു ഊണിന്റെ പൈസയ്ക്ക് ഒരു <br>
-                    <span class="gradient-text">AI PSC ജോത്സ്യൻ!</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-medium">
-                    അടുത്ത നിങ്ങളുടെ കേരള PSC പരീക്ഷയ്ക്ക് വരാൻ പോകുന്ന, <span class="text-blue-700 font-bold">AI പ്രെഡിക്റ്റ് ചെയ്ത ഫുൾ ക്വസ്റ്റ്യൻ പേപ്പറും</span> കൂടാതെ ലൈവ് PSC എക്സാമുകളും, നിങ്ങൾക്ക് മാത്രമായി നിങ്ങളെ അറിയുന്ന <span class="text-blue-700 font-bold">AI പേഴ്സണൽ മെന്ററും!</span> കേവലം ഒരു ഊണിന്റെ പൈസയ്ക്ക് സ്വന്തമാക്കൂ...
-                </p>
-
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="#download" class="w-full sm:w-auto gradient-bg text-white font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 transition-all shadow-xl shadow-blue-500/20">
-                        ഇപ്പൊ തന്നെ ഡൗൺലോഡ് ചെയ്യൂ
-                    </a>
-                    <button onclick="navigateTo('/about-us')" class="w-full sm:w-auto bg-white text-slate-700 font-semibold text-lg px-8 py-4 rounded-xl hover:bg-gray-50 border border-slate-200 transition shadow-sm">
-                        Our Story
-                    </button>
-                </div>
-            </section>
-
-            <!-- Warning / AI Power Notice -->
-            <section class="max-w-4xl mx-auto mb-20">
-                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
-                    <div class="text-4xl">⚠️</div>
-                    <div>
-                        <h3 class="text-amber-900 font-bold text-lg mb-2">ഇത് കേവലം ഒരു ചാറ്റ് ജിപിടിയോ (ChatGPT) ജെമിനിയോ സാധാരണ രീതിയിൽ നൽകുന്ന ക്വസ്റ്റ്യൻ പേപ്പർ അല്ല!</h3>
-                        <p class="text-amber-900/80 text-sm md:text-base leading-relaxed font-medium">
-                            ലക്ഷക്കണക്കിന് ഡാറ്റാ പോയിന്റുകൾ വിശകലനം ചെയ്ത്, ഫുൾ സിലബസും പ്രീവിയസ് ഇയർ ക്വസ്റ്റ്യൻ പേപ്പർ പാറ്റേണുകളും പൂർണ്ണമായി അനലൈസ് ചെയ്ത്, ലോകത്തിലെ ഏറ്റവും ശക്തമായ <span class="text-blue-900 font-bold">Gemini LLM 2.5</span> നൽകുന്ന ക്വസ്റ്റ്യൻ പേപ്പറുകളാണ് ഇത്.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Section -->
+            <!-- WHAT WE OFFER SECTION (Modern Cards with Illustrations/Icons) -->
             <section class="mb-20">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-black mb-4 text-slate-900">എന്തുകൊണ്ട് <span class="gradient-text">AI PSC Jolsyan?</span></h2>
-                    <p class="text-slate-500 font-medium">മറ്റ് കോച്ചിംഗുകളിൽ നിന്നും ഞങ്ങളെ വ്യത്യസ്തമാക്കുന്ന സവിശേഷതകൾ</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">
+                        What We <span class="gradient-text">Offer</span>
+                    </h2>
+                    <p class="text-slate-600 font-medium text-base">
+                        Everything you need to crack RRB & SSC exams built into one seamless, AI-powered mobile app.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="premium-card p-8 rounded-2xl">
-                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-6 border border-blue-100 text-blue-600">📍</div>
-                        <h3 class="text-xl font-bold mb-3 text-slate-900">കേരളത്തിൽ ആദ്യം</h3>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
-                            ഇങ്ങനെയൊരു ആപ്പ് കേരളത്തിൽ ആദ്യമായി ഇവിടെ മാത്രം! അത്യാധുനിക AI സാങ്കേതികവിദ്യ ഇനി നിങ്ങളുടെ വിരൽത്തുമ്പയിൽ.
-                        </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: Comprehensive Digital Classes -->
+                    <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-blue-500/20">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md">900+ Topics</span>
+                            <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Comprehensive Digital Classes</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Complete, structured syllabus coverage across 900+ topics tailored for all tiers of SSC and RRB examination levels.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-400">
+                            <span>Syllabus Aligned</span>
+                        </div>
                     </div>
-                    <div class="premium-card p-8 rounded-2xl">
-                        <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-2xl mb-6 border border-sky-100 text-sky-600">📝</div>
-                        <h3 class="text-xl font-bold mb-3 text-slate-900">ലൈവ് പരീക്ഷകൾ</h3>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
-                            നിങ്ങളുടെ യഥാർത്ഥ കഴിവ് അളക്കാനും സമയക്രമം പാലിക്കാനും സഹായിക്കുന്ന തത്സമയ (Live) PSC പരീക്ഷകൾ.
-                        </p>
+
+                    <!-- Card 2: Post-Class Quizzes -->
+                    <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-sky-500/20">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold text-sky-600 uppercase tracking-wider bg-sky-50 px-2.5 py-1 rounded-md">Instant Feedback</span>
+                            <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Post-Class Quizzes</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Immediate assessments conducted right after every session to evaluate understanding and reinforce key concepts on the spot.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-400">
+                            <span>Concept Retention</span>
+                        </div>
                     </div>
-                    <div class="premium-card p-8 rounded-2xl">
-                        <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-2xl mb-6 border border-indigo-100 text-indigo-600">🤖</div>
-                        <h3 class="text-xl font-bold mb-3 text-slate-900">24x7 പേഴ്സണൽ മെന്റർഷിപ്പ്</h3>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
-                            നിങ്ങളുടെ സ്ട്രെങ്തും വീക്ക്നസും കൃത്യമായി വിലയിരുത്തി നിങ്ങളെ ലക്ഷ്യത്തിലേക്ക് വഴിനടത്താൻ ഒരു AI പേഴ്സണൽ മെന്റർ കൂടെയുണ്ടാകും.
-                        </p>
+
+                    <!-- Card 3: Practice Library -->
+                    <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-teal-500/20">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold text-teal-600 uppercase tracking-wider bg-teal-50 px-2.5 py-1 rounded-md">3,000+ Questions</span>
+                            <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Extensive Practice Library</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Access 30+ full-length model exams, downloadable past papers, downloadable study notes, and predicted question insights.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-400">
+                            <span>Model Exams & Notes</span>
+                        </div>
                     </div>
+
+                    <!-- Card 4: Personalized AI Mentor -->
+                    <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-purple-500/20">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold text-purple-600 uppercase tracking-wider bg-purple-50 px-2.5 py-1 rounded-md">24/7 AI Guidance</span>
+                            <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Personalized AI Mentor</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                A dedicated virtual guide that tracks real-time performance, monitors syllabus completion, and offers customized strategy tips.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-400">
+                            <span>Smart Progress Tracking</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Battle Arena -->
+                    <div class="offer-card p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between lg:col-span-2">
+                        <div>
+                            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md shadow-amber-500/20">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md">Gamified Arena</span>
+                            <h3 class="text-xl font-bold mt-3 mb-3 text-slate-900">Battle Arena (Speed & Accuracy)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Gamified, interactive peer learning games engineered to build real-time solving speed, laser focus, and exam-level accuracy under pressure.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-400">
+                            <span>Real-Time Peer Battles</span>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto mb-20">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-black mb-4 text-slate-900"><span class="gradient-text">FAQs</span> - സംശയങ്ങൾക്കുള്ള മറുപടികൾ</h2>
+                    <h2 class="text-3xl font-extrabold mb-3 text-slate-900">
+                        Frequently Asked <span class="gradient-text">Questions</span>
+                    </h2>
+                    <p class="text-slate-500 font-medium">Clear answers to help you get started with PrashnaBodhi</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="premium-card p-6 rounded-xl">
-                        <h4 class="text-blue-900 font-bold mb-2">Q: എന്താണ് AI PSC Jolsyan ആപ്പ്?</h4>
-                        <p class="text-slate-600 text-sm md:text-base font-medium">A: കേരളാ PSC പരീക്ഷകൾക്കായി ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ് (AI) ഉപയോഗിച്ച് കൃത്യമായ ചോദ്യങ്ങൾ പ്രെഡിക്റ്റ് ചെയ്യാനും, വ്യക്തിഗത മെന്റർഷിപ്പ് നൽകാനും സഹായിക്കുന്ന കേരളത്തിലെ ആദ്യത്തെ ആപ്പാണിത്.</p>
+                    <div class="offer-card p-6 rounded-2xl">
+                        <h4 class="text-blue-900 font-bold mb-2 text-base">Q: What exams does PrashnaBodhi cover?</h4>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">A: PrashnaBodhi is explicitly curated for Railway Recruitment Board (RRB NTPC, Group D, JE) and Staff Selection Commission (SSC CGL, CHSL, MTS, GD) as well as central government examinations across India.</p>
                     </div>
-                    <div class="premium-card p-6 rounded-xl">
-                        <h4 class="text-blue-900 font-bold mb-2">Q: ഇത് സാധാരണ ചാറ്റ് ബോറ്റുകളിൽ നിന്നും എങ്ങനെ വ്യത്യസ്തമാകുന്നു?</h4>
-                        <p class="text-slate-600 text-sm md:text-base font-medium">A: ഇത് വെറുമൊരു ChatGPT അല്ലെങ്കിൽ Gemini പ്രോംപ്റ്റ് അല്ല. ലക്ഷക്കണക്കിന് പ്രീവിയസ് ഇയർ ചോദ്യങ്ങളും സിലബസും Gemini LLM 2.5 ന്റെ സഹായത്തോടെ ആഴത്തിൽ വിശകലനം ചെയ്ത് നിർമ്മിച്ച പ്രത്യേക സിസ്റ്റമാണിത്.</p>
+                    <div class="offer-card p-6 rounded-2xl">
+                        <h4 class="text-blue-900 font-bold mb-2 text-base">Q: How does the AI Mentor work?</h4>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">A: Our AI Mentor tracks your post-class quiz results and model test performance in real-time, highlighting your specific weak spots and suggesting personalized topic reviews.</p>
                     </div>
-                    <div class="premium-card p-6 rounded-xl">
-                        <h4 class="text-blue-900 font-bold mb-2">Q: ഇതിന്റെ ഫീസ് എത്രയാണ്?</h4>
-                        <p class="text-slate-600 text-sm md:text-base font-medium">A: വെറുമൊരു സാധാരണ ഊണിന്റെ വിലയിൽ, അതായത് വെറും 99 രൂപയ്ക്ക് ഈ ഫീച്ചറുകളെല്ലാം നിങ്ങൾക്ക് ആപ്പിൽ ലഭ്യമാകും.</p>
+                    <div class="offer-card p-6 rounded-2xl">
+                        <h4 class="text-blue-900 font-bold mb-2 text-base">Q: Is PrashnaBodhi affordable for students from small towns?</h4>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">A: Yes! Our mission is to bridge the educational gap for students in Tier-2 and Tier-3 cities by providing top-tier AI coaching at a fraction of offline institute costs.</p>
                     </div>
                 </div>
             </section>
@@ -215,141 +280,152 @@
 
         <!-- TAB 2: ABOUT US -->
         <div id="about" class="tab-content max-w-4xl mx-auto py-6">
-            <h2 class="text-3xl font-black mb-6 gradient-text">About Us</h2>
-            <div class="premium-card p-8 rounded-2xl space-y-6 text-slate-600 leading-relaxed font-medium">
-                <p>
-                    <strong>AI PSC</strong> is a proud flagship product of <strong>QModify Technologies LLP</strong>. Our firm was officially founded in December 2025 and proudly launched from Bengaluru, the Silicon Valley of India.
+            <h2 class="text-3xl font-extrabold mb-6 gradient-text">About PrashnaBodhi</h2>
+            <div class="offer-card p-8 rounded-3xl space-y-6 text-slate-600 leading-relaxed font-normal">
+                <p class="text-lg text-slate-800 font-medium">
+                    PrashnaBodhi is an AI-powered coaching platform designed specifically for RRB, SSC, and central government exam aspirants across India. We believe every student deserves access to top-tier guidance, regardless of their financial background or geographical location.
                 </p>
                 <p>
-                    Originating from the nation's premier technological and innovation hub, our mission-driven system quickly scaled its reach and now operates across all states in India, empowering thousands of students.
+                    For students in Tier-2 and Tier-3 cities or economically disadvantaged backgrounds, high course fees and expensive offline coaching institutes often stand in the way of their dreams. PrashnaBodhi bridges this gap by leveraging advanced AI technology to make high-quality exam preparation accessible and affordable to all.
                 </p>
-                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">How QModify is Transforming Kerala PSC Aspirants' Lives:</h3>
-                <p>
-                    കേരളത്തിലെ ലക്ഷക്കണക്കിന് ഉദ്യോഗാർത്ഥികൾ പരമ്പരാഗതമായ വലിയ കോച്ചിംഗ് ഫീസുകളും ഭാരമേറിയ പുസ്തകക്കെട്ടുകളും കൊണ്ട് ബുദ്ധിമുട്ടുമ്പോൾ, <strong>QModify Technologies</strong> അതിനൊരു സ്മാർട്ട് പരിഹാരം കാണുകയാണ്. അത്യാധുനിക ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ് സങ്കേതങ്ങൾ സാധാരണക്കാർക്കും താങ്ങാവുന്ന വിലയിൽ ലഭ്യമാക്കുക എന്നതാണ് ഞങ്ങളുടെ ലക്ഷ്യം.
-                </p>
-                <p>
-                    <strong>AI PSC Jolsyan</strong> ആപ്പിലൂടെ, ഒരു വിദ്യാർത്ഥിക്ക് അവരുടെ പഠന നിലവാരം (Strength & Weakness) തത്സമയം തിരിച്ചറിയാനും, 24x7 അസിസ്റ്റൻസ് നൽകുന്ന ഒരു AI പേഴ്സണൽ മെന്ററെ സ്വന്തമാക്കാനും സാധിക്കുന്നു. ഇത് നിങ്ങളുടെ സമയത്തെ ലാഭിക്കുന്നതിനോടൊപ്പം കൃത്യമായ ദിശാബോധത്തോടെ സർക്കാർ ജോലി എന്ന സ്വപ്നത്തിലേക്ക് വഴിനടത്തുകയും ചെയ്യുന്നു.
-                </p>
+
+                <hr class="border-slate-200 my-6">
+
+                <h3 class="text-xl font-bold text-slate-900">Legal Entity & Credentials</h3>
+                <ul class="space-y-3 text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-600 font-bold">▪</span>
+                        <span><strong>Headquarters:</strong> Bengaluru, Karnataka, India</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-600 font-bold">▪</span>
+                        <span><strong>Legal Entity:</strong> Owned and operated by <strong>QMODIFY TECHNOLOGIES LLP</strong></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-600 font-bold">▪</span>
+                        <span><strong>Registration Status:</strong> Government-recognized registered entity (LLPIN: ACX-0572)</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
         <!-- TAB 3: OFFERS -->
         <div id="offers" class="tab-content max-w-4xl mx-auto py-6">
-            <h2 class="text-3xl font-black mb-6 gradient-text">Exclusive Offers</h2>
+            <h2 class="text-3xl font-extrabold mb-6 gradient-text">Exclusive Offers</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="premium-card p-8 rounded-2xl border-2 border-blue-500/30 relative">
-                    <span class="absolute top-4 right-4 bg-orange-500 text-white font-extrabold px-3 py-1 text-xs rounded-full uppercase">Launch Offer</span>
-                    <h3 class="text-2xl font-black text-blue-900 mb-2">Early Bird Access</h3>
-                    <p class="text-slate-500 mb-6 font-medium">ആദ്യമായി ജോയിൻ ചെയ്യുന്നവർക്കായി സിലബസ് പ്രെഡിക്ഷനും ലൈവ് മോക്ക് ടെസ്റ്റുകളും ഒരുമിച്ച്!</p>
-                    <div class="text-3xl font-black text-blue-700 mb-4">₹99 <span class="text-sm text-gray-400 line-through">₹499</span></div>
-                    <a href="#download" onclick="navigateTo('/')" class="block text-center gradient-bg text-white font-bold py-2.5 rounded-xl text-sm shadow-md">Claim Now</a>
+                <div class="offer-card p-8 rounded-3xl border-2 border-blue-500/40 relative">
+                    <span class="absolute top-4 right-4 bg-blue-600 text-white font-extrabold px-3 py-1 text-xs rounded-full uppercase tracking-wider">Launch Pass</span>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2">All-Access Student Pass</h3>
+                    <p class="text-slate-500 mb-6 text-sm">Full access to 900+ topics, 30+ model exams, Battle Arena games, and 24x7 AI Mentorship.</p>
+                    <div class="text-4xl font-black text-blue-600 mb-4">₹99 <span class="text-base text-slate-400 line-through font-normal">₹999</span></div>
+                    <a href="#download" onclick="navigateTo('/')" class="block text-center gradient-bg text-white font-bold py-3 rounded-xl text-sm shadow-md hover:opacity-95 transition">Claim Offer Now</a>
                 </div>
-                <div class="premium-card p-8 rounded-2xl opacity-60">
-                    <h3 class="text-2xl font-black text-slate-400 mb-2">Mega Premium Pack</h3>
-                    <p class="text-slate-400 mb-6 font-medium">Unlimited AI predictions for multi-level exams. (Coming Soon)</p>
-                    <div class="text-3xl font-black text-slate-300 mb-4">Stay Tuned</div>
+                <div class="offer-card p-8 rounded-3xl opacity-75">
+                    <h3 class="text-2xl font-black text-slate-400 mb-2">Institutional / Group Pass</h3>
+                    <p class="text-slate-400 mb-6 text-sm">Custom AI analytics for college batches & coaching partners across India.</p>
+                    <div class="text-2xl font-bold text-slate-400 mb-4">Contact Team</div>
+                    <a href="#contact" onclick="navigateTo('/')" class="block text-center bg-slate-100 text-slate-600 font-bold py-3 rounded-xl text-sm">Inquire Now</a>
                 </div>
             </div>
         </div>
 
         <!-- TAB 4: PRIVACY POLICY -->
         <div id="privacy" class="tab-content max-w-4xl mx-auto py-6">
-            <h2 class="text-3xl font-black mb-6 gradient-text">Privacy Policy</h2>
-            <div class="premium-card p-8 rounded-2xl text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
-                <p class="text-slate-900 font-semibold">Last Updated: June 2026</p>
-                <p>Welcome to AI PSC Jolsyan, operated by QModify Technologies LLP. We value your privacy and are committed to protecting your personal data.</p>
+            <h2 class="text-3xl font-extrabold mb-6 gradient-text">Privacy Policy</h2>
+            <div class="offer-card p-8 rounded-3xl text-slate-600 space-y-4 text-sm leading-relaxed">
+                <p class="text-slate-900 font-semibold">Last Updated: September 2026</p>
+                <p>Welcome to PrashnaBodhi, operated by QMODIFY TECHNOLOGIES LLP. We respect your privacy and are committed to safeguarding your personal data.</p>
                 
                 <h3 class="text-slate-900 font-bold mt-4">1. Information We Collect</h3>
-                <p>We may collect basic registration details such as your Name, Email Address, Phone Number, and academic preferences to customize your AI mentoring profile.</p>
+                <p>We may collect registration details such as your Name, Mobile Number, Email Address, and target central government exam preferences (RRB/SSC) to customize your AI study plan.</p>
                 
-                <h3 class="text-slate-900 font-bold mt-4">2. How We Use Data</h3>
-                <p>Your data is used to provide accurate question predictions, analyze strengths/weaknesses via our Gemini LLM engine, and ensure high accuracy live test experiences.</p>
+                <h3 class="text-slate-900 font-bold mt-4">2. Usage of Information</h3>
+                <p>Your performance data in quizzes and model exams is analyzed solely to provide performance analytics, AI mentor suggestions, and adaptive practice recommendations.</p>
                 
                 <h3 class="text-slate-900 font-bold mt-4">3. Data Security</h3>
-                <p>We implement secure cloud infrastructure to ensure that your private profile data is protected against unauthorized access.</p>
-                <p class="italic text-blue-600">[Note: You can easily modify or replace this text with your formal legal documentation later.]</p>
+                <p>We employ standard cloud security measures to safeguard user information against unauthorized access, loss, or alteration.</p>
             </div>
         </div>
 
         <!-- TAB 5: TERMS & CONDITIONS -->
         <div id="terms" class="tab-content max-w-4xl mx-auto py-6">
-            <h2 class="text-3xl font-black mb-6 gradient-text">Terms & Conditions</h2>
-            <div class="premium-card p-8 rounded-2xl text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
-                <p class="text-slate-900 font-semibold">Last Updated: June 2026</p>
-                <p>By downloading and using the AI PSC Jolsyan app, you agree to comply with the following legal terms outlined by QModify Technologies LLP.</p>
+            <h2 class="text-3xl font-extrabold mb-6 gradient-text">Terms & Conditions</h2>
+            <div class="offer-card p-8 rounded-3xl text-slate-600 space-y-4 text-sm leading-relaxed">
+                <p class="text-slate-900 font-semibold">Last Updated: September 2026</p>
+                <p>By registering or using the PrashnaBodhi application, you agree to comply with the terms and conditions set forth by QMODIFY TECHNOLOGIES LLP.</p>
                 
-                <h3 class="text-slate-900 font-bold mt-4">1. Usage & License</h3>
-                <p>The prediction materials, live papers, and automated mentoring reports provided inside the application are for individual preparation use only. Commercial distribution is prohibited.</p>
+                <h3 class="text-slate-900 font-bold mt-4">1. Permitted Use</h3>
+                <p>All digital classes, downloadable notes, practice questions, and AI mentor reports are intended exclusively for personal educational preparation for RRB, SSC, and Central Government exams.</p>
                 
-                <h3 class="text-slate-900 font-bold mt-4">2. Payments & Pricing</h3>
-                <p>The current introductory price is ₹99. Payments processed via external secure gateways are non-refundable unless specified otherwise under extreme dynamic platform errors.</p>
+                <h3 class="text-slate-900 font-bold mt-4">2. Intellectual Property</h3>
+                <p>Content, algorithms, and application branding belong to QMODIFY TECHNOLOGIES LLP. Unauthorized distribution or copying is strictly prohibited.</p>
                 
-                <h3 class="text-slate-900 font-bold mt-4">3. Disclaimer</h3>
-                <p>Our algorithms provide high-probability predictions based on comprehensive pattern analyses of previous year questions. However, final examination results depend fully on the candidate's dedication and actual PSC board patterns.</p>
+                <h3 class="text-slate-900 font-bold mt-4">3. Educational Disclaimer</h3>
+                <p>PrashnaBodhi is an independent AI learning platform and is not affiliated with or endorsed by official government exam conducting bodies (such as RRB or SSC).</p>
             </div>
         </div>
 
         <!-- TAB 6: DELETE ACCOUNT -->
         <div id="delete-account" class="tab-content max-w-md mx-auto py-6">
-            <h2 class="text-3xl font-black mb-6 text-red-600 text-center">Delete Account</h2>
-            <div class="premium-card p-8 rounded-2xl text-center">
-                <p class="text-slate-600 mb-6 text-sm font-medium">നിങ്ങളുടെ അക്കൗണ്ടും അതുമായി ബന്ധപ്പെട്ട എല്ലാ ഡാറ്റയും ആപ്പിൽ നിന്നും പൂർണ്ണമായി നീക്കം ചെയ്യണോ? താഴെ വിവരങ്ങൾ നൽകി സബ്മിറ്റ് ചെയ്യുക.</p>
-                <form action="mailto:contact@pscjolsyan.in" method="post" enctype="text/plain" class="space-y-4 text-left">
+            <h2 class="text-3xl font-extrabold mb-6 text-red-600 text-center">Delete Account</h2>
+            <div class="offer-card p-8 rounded-3xl text-center">
+                <p class="text-slate-600 mb-6 text-sm">Would you like to permanently remove your account and associated study data from PrashnaBodhi? Submit your registered info below.</p>
+                <form action="mailto:support@prashnabodhi.com" method="post" enctype="text/plain" class="space-y-4 text-left">
                     <div>
                         <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Registered Phone / Email</label>
-                        <input type="text" name="Account To Delete" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
+                        <input type="text" name="Account To Delete" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
                     </div>
                     <div>
                         <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Reason for deletion</label>
-                        <textarea name="Reason" rows="3" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
+                        <textarea name="Reason" rows="3" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl transition shadow-lg">
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
                         Confirm Data Deletion Request
                     </button>
                 </form>
             </div>
         </div>
 
-        <!-- SHARED HERO DOWNLOAD CONTAINER -->
+        <!-- SHARED DOWNLOAD CTA SECTION -->
         <div id="download-anchor" class="max-w-4xl mx-auto my-16">
-            <div id="download" class="gradient-bg rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-blue-500/15 relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+            <div id="download" class="gradient-bg rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-blue-500/20 relative overflow-hidden text-white">
+                <div class="absolute -right-10 -top-10 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
                 
-                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">ഇതെല്ലാം ഇപ്പോൾ വെറും 99 രൂപയ്ക്ക്!</h2>
-                <p class="text-white/90 text-lg md:text-xl max-w-xl mx-auto mb-8 font-medium">
-                    നിങ്ങളുടെ സർക്കാർ ജോലി എന്ന സ്വപ്നത്തിലേക്ക് ഒരു സ്മാർട്ട് ചുവടുവെക്കൂ. ഇന്ന് തന്നെ ആപ്പ് ഡൗൺലോഡ് ചെയ്യൂ!
+                <h2 class="text-3xl md:text-5xl font-black mb-4">Start Your Exam Success Journey Today</h2>
+                <p class="text-white/90 text-base md:text-xl max-w-2xl mx-auto mb-8 font-normal">
+                    Get full access to AI classes, practice tests, and personalized mentoring. Built for aspirants across all of India.
                 </p>
                 
-                <div class="bg-black/10 inline-flex flex-col items-center p-6 rounded-2xl backdrop-blur-md border border-white/20 min-w-[280px]">
+                <div class="bg-white/10 inline-flex flex-col items-center p-6 rounded-2xl backdrop-blur-md border border-white/20 min-w-[280px]">
                     <span class="text-xs uppercase tracking-widest text-blue-100 font-bold mb-1">Android & iOS App</span>
-                    <span class="text-xl font-black text-white font-[Plus Jakarta Sans] mb-4">📱 AI PSC Jolsyan</span>
-                    <button class="w-full bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-gray-50 transition shadow-lg flex items-center justify-center gap-2">
-                        <span>Download Now</span>
+                    <span class="text-2xl font-black text-white mb-4">📱 PrashnaBodhi App</span>
+                    <button class="w-full bg-white text-blue-700 font-bold px-8 py-3.5 rounded-xl hover:bg-slate-100 transition shadow-lg flex items-center justify-center gap-2">
+                        <span>Download App Free</span>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Contact Form -->
-        <section class="max-w-xl mx-auto my-16 bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+        <section id="contact" class="max-w-xl mx-auto my-16 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
             <h3 class="text-2xl font-black mb-2 text-center text-slate-900">Contact Us</h3>
-            <p class="text-slate-500 text-sm text-center mb-6 font-medium">ഏതെങ്കിലും തരത്തിലുള്ള സഹായങ്ങൾക്ക് ഞങ്ങൾക്ക് മെയിൽ അയക്കാവുന്നതാണ്</p>
+            <p class="text-slate-500 text-sm text-center mb-6">Have questions or need assistance? Send us a message.</p>
             
-            <form action="mailto:contact@pscjolsyan.in" method="post" enctype="text/plain" class="space-y-4">
+            <form action="mailto:support@prashnabodhi.com" method="post" enctype="text/plain" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Name</label>
-                    <input type="text" name="Name" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
+                    <input type="text" name="Name" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Email ID</label>
-                    <input type="email" name="Email" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
+                    <input type="email" name="Email" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Message</label>
-                    <textarea name="Message" rows="4" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500"></textarea>
+                    <textarea name="Message" rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-blue-500"></textarea>
                 </div>
-                <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 rounded-xl hover:opacity-90 transition shadow-xl">
-                    Send Mail
+                <button type="submit" class="w-full gradient-bg text-white font-bold py-3.5 rounded-xl hover:opacity-95 transition shadow-lg">
+                    Send Message
                 </button>
             </form>
         </section>
@@ -358,7 +434,7 @@
 
     <!-- Footer -->
     <footer class="w-full py-8 text-center text-sm text-slate-400 border-t border-slate-200 max-w-7xl mx-auto font-medium">
-        <p>&copy; 2026 AI PSC Jolsyan (QModify Technologies LLP). All Rights Reserved.</p>
+        <p>&copy; 2026 PrashnaBodhi (QMODIFY TECHNOLOGIES LLP - LLPIN: ACX-0572). All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -371,7 +447,7 @@
             }
         })();
 
-        // Route map linking paths to tab IDs
+        // Route map matching exact path routes
         const routes = {
             '/': 'home',
             '/about-us': 'about',
@@ -382,7 +458,6 @@
         };
 
         function getTabFromPath(path) {
-            // Trim trailing slashes for comparison
             const cleanPath = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
             return routes[cleanPath] || 'home';
         }
