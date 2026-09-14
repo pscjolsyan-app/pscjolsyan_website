@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - PrashnaBodhi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .gradient-text { background: linear-gradient(135deg, #2563eb, #0284c7, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-bg { background: linear-gradient(135deg, #1d4ed8, #0284c7); }
+        .offer-card { background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.08); }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
 
+    <!-- Header -->
+    <header class="w-full py-4 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-slate-200/80 gap-4 bg-[#f8fafc]">
+        <a href="/" class="flex items-center cursor-pointer">
+            <img src="../Assets/Logo.jpg" alt="PrashnaBodhi Logo" class="h-11 w-11 rounded-xl object-cover shadow-md mr-3 border border-blue-200">
+            <div class="flex flex-col">
+                <span class="text-xl font-extrabold tracking-tight gradient-text">PrashnaBodhi</span>
+                <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">AI Exam Prep</span>
+            </div>
+        </a>
+        <nav class="flex flex-wrap justify-center gap-1 text-sm font-semibold text-slate-600">
+            <a href="/" class="px-3 py-2 rounded-lg hover:text-blue-600 transition">Home</a>
+            <a href="/about-us" class="px-3 py-2 rounded-lg hover:text-blue-600 transition">About Us</a>
+            <a href="https://api.prashnabodhi.in/enrollment" target="_blank" class="px-3 py-2 rounded-lg text-blue-600 font-bold hover:bg-blue-50 transition">Buy Course</a>
+            <a href="/privacy-policy" class="px-3 py-2 rounded-lg hover:text-blue-600 transition">Privacy Policy</a>
+            <a href="/terms-and-conditions" class="px-3 py-2 rounded-lg hover:text-blue-600 transition">Terms & Conditions</a>
+            <a href="/delete-account" class="px-3 py-2 rounded-lg text-red-500 font-bold transition">Delete Account</a>
+        </nav>
+        <a href="https://play.google.com/store/apps/details?id=in.pscjolsyan.app&hl=en" target="_blank" class="gradient-bg text-white font-bold px-6 py-2.5 rounded-full text-sm shadow-md">Download App</a>
+    </header>
+
+    <!-- Account Deletion Form -->
+    <main class="max-w-md mx-auto py-12 px-4">
+        <h1 class="text-3xl font-extrabold mb-6 text-red-600 text-center">Delete Account</h1>
+        <div class="offer-card p-8 rounded-3xl text-center">
+            <p class="text-slate-600 mb-6 text-sm">Would you like to permanently remove your account and associated study data from PrashnaBodhi? Submit your registered info below.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="hidden" name="subject" value="Account Deletion Request - PrashnaBodhi">
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Registered Phone / Email</label>
+                    <input type="text" name="user_account" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Reason for deletion</label>
+                    <textarea name="reason" rows="3" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-red-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg">
+                    Confirm Data Deletion Request
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="w-full py-8 text-center text-sm text-slate-400 border-t border-slate-200 max-w-7xl mx-auto">
+        <p>&copy; 2026 PrashnaBodhi (QMODIFY TECHNOLOGIES LLP - LLPIN: ACX-0572). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
